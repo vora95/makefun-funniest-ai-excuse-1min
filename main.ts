@@ -16,6 +16,10 @@
 // fixed fragments, there is no clock, no random source, no network call
 // and no input file, so the output bytes are identical every time the
 // script is executed.
+//
+// The entry gate this file must satisfy: entry.txt is UTF-8, 1–200
+// characters, and not whitespace-only; this line is 88 characters,
+// exactly one line, and carries no trailing newline.
 import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
